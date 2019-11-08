@@ -33343,7 +33343,7 @@ window.addEventListener('load', async function() {
       val = "https://nameth.io/?ref=" + input.value;
       el.href = val;
       el.innerText = val;
-      el.css.display = "inline-block";
+      el.style.display = "inline-block";
     }
   });
 
