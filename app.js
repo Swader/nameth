@@ -33139,7 +33139,8 @@ const urlParams = new URLSearchParams(window.location.search);
 const myRef = urlParams.get('ref');
 
 const w = new __WEBPACK_IMPORTED_MODULE_0_web3___default.a();
-const referrerAddress = (myRef && (w.isAddress(myRef) || myRef.indexOf(".eth") > -1)) ? myRef : "0xB9b8EF61b7851276B0239757A039d54a23804CBb";
+// const referrerAddress = (myRef && (w.isAddress(myRef) || myRef.indexOf(".eth") > -1)) ? myRef : "0xB9b8EF61b7851276B0239757A039d54a23804CBb";
+const referrerAddress = (myRef && w.isAddress(myRef)) ? myRef : "0xB9b8EF61b7851276B0239757A039d54a23804CBb";
 
 var SubdomainRegistrar = __WEBPACK_IMPORTED_MODULE_1_truffle_contract___default()(__WEBPACK_IMPORTED_MODULE_7__build_contracts_EthRegistrarSubdomainRegistrar_json___default.a);
 var ENS = __WEBPACK_IMPORTED_MODULE_1_truffle_contract___default()(__WEBPACK_IMPORTED_MODULE_8__build_contracts_ENS_json___default.a);
