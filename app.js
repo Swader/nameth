@@ -33166,6 +33166,9 @@ var registrarVersions = {
 };
 
 function domainge(infoa, infob) {
+  // Rank my domains first
+  if (infoa[0] === 'dev') return true;
+  if (infob[0] === 'dev') return false;
   // Rank free domains highest, regardless of referral fee
   if(infoa[1] == 0) return true;
   if(infob[1] == 0) return false;
@@ -33175,6 +33178,8 @@ function domainge(infoa, infob) {
   if(!infoa[1].eq(infob[1])) return infoa[1].lt(infob[1]);
   // Finally sort alphabetically
   return infoa[0] < infob[0];
+  // console.log(infoa, infob);
+  // return false;
 }
 
 window.App = {
@@ -33253,6 +33258,7 @@ window.App = {
         item.data({domain: domain, subdomain: subdomain});
 
         var namediv = __WEBPACK_IMPORTED_MODULE_4_jquery___default()('<div class="d-flex w-100 justify-content-between">');
+        
         namediv.append(__WEBPACK_IMPORTED_MODULE_4_jquery___default()('<h5 class="mb-1">').text(name));
         var icon = __WEBPACK_IMPORTED_MODULE_4_jquery___default()('<span class="icon">');
         namediv.append(icon.append(__WEBPACK_IMPORTED_MODULE_4_jquery___default()('<span class="oi oi-ellipses">')));
@@ -33372,7 +33378,7 @@ module.exports = __webpack_require__(67);
 /* 62 */
 /***/ (function(module, exports) {
 
-module.exports = [{"name":"awake","version":"1.0"},{"name":"hack","version":"1.0"},{"name":"dev","version":"1.0"}]
+module.exports = [{"name":"awake","version":"1.0"},{"name":"hack","version":"1.0"},{"name":"dev","version":"1.0","premium":true}]
 
 /***/ }),
 /* 63 */
