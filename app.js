@@ -33378,7 +33378,7 @@ module.exports = __webpack_require__(67);
 /* 62 */
 /***/ (function(module, exports) {
 
-module.exports = [{"name":"awake","version":"1.0"},{"name":"dev","version":"1.0","premium":true}]
+module.exports = [{"name":"awake","version":"1.0"},{"name":"hack","version":"1.0"},{"name":"dev","version":"1.0","premium":true}]
 
 /***/ }),
 /* 63 */
