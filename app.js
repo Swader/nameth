@@ -33310,12 +33310,12 @@ window.App = {
     __WEBPACK_IMPORTED_MODULE_4_jquery___default()(".domainname").text(subdomain + "." + domain.name + "." + tld);
     __WEBPACK_IMPORTED_MODULE_4_jquery___default()("#registeringmodal").modal('show');
 
-    if (referrerAddress.indexOf(".eth") > -1) {
-      referrerAddress = await self.ens.resolver(__WEBPACK_IMPORTED_MODULE_2_eth_ens_namehash___default.a.hash(myRef));
-      self.referrerAddress = referrerAddress;
-      console.log(referrerAddress);
-      console.log(self);
-    }
+    // if (referrerAddress.indexOf(".eth") > -1) {
+    //   referrerAddress = await self.ens.resolver(namehash.hash(myRef));
+    //   self.referrerAddress = referrerAddress;
+    //   console.log(referrerAddress);
+    //   console.log(self);
+    // }
 
     var tx = await registrarVersions[domain.version].register(domain, subdomain, web3.eth.accounts[0], referrerAddress, this.resolverAddress, info[1]);
     __WEBPACK_IMPORTED_MODULE_4_jquery___default()("#etherscan").attr("href", "https://etherscan.io/tx/" + tx.tx);
